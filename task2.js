@@ -5,32 +5,42 @@ let result = (a + b < 10)?'Few':'Many';
 //task 2.2 
 let age;
 if (age >= 18 && age <= 90){
-console.log("Right age.");
+console.log("valid age");
+}
+else {
+    console.log("invalid age");
 }
 
 //task 2.3
-let userName = prompt("Please, enter your first name.", );
+let userName = prompt("Please, enter your first name.");
+if (name){ //если значение не пустое, корректное, truthy
 alert("Hello, " + userName +", nice to meet you.");
-let birthYear = prompt("Please enter your birthday year.", );
-alert((2020 - birthYear) + " years old.");
+
+let birthYear = prompt("Please enter your birthday year.");
+let currentYear = new Date().getFullYear();
+alert((currentYear - birthYear) + " years old.");
+}
+else {
+    console.log("Input is empty.");
+}
 
 //task 2.4
-let num = prompt("Please, enter a number", );
+let num = prompt("Please, enter a number");
 
 switch(true){
-    case num > 0 && num < 60:
+    case num < 60:
         alert("F");
         break;
-    case num >= 60 && num < 70:
+    case num < 70:
         alert("D");
         break;
-    case num >= 70 && num < 80:
+    case num < 80:
         alert("C");
         break;
-    case num >= 70 && num < 90:
+    case num < 90:
         alert("B");
         break;
-    case num >= 90 && num < 100:
+    case num < 100:
         alert("A");
         break;
     default:
